@@ -2,12 +2,13 @@ import { btnsHeader } from "./../../Model/headerModel.js";
 
 export function criarHeader() {
     let Sepheader = document.getElementById('header');
+    // Sepheader é a Separacao Header
 
     let restHead = document.createElement('div');
     restHead.id = "restHead";
 
-    let menuHead = document.createElement('button');
-    menuHead.id = "menuHead";
+    // let menuHead = document.createElement('button');
+    // menuHead.id = "menuHead";
 
     // let logo = document.createElement('img');
     let logo = document.createElement('div');
@@ -18,7 +19,7 @@ export function criarHeader() {
     titulo.id = "titulo";
     titulo.textContent = "titulo"
 
-    restHead.appendChild(menuHead)
+    // restHead.appendChild(menuHead)
     restHead.appendChild(logo)
     restHead.appendChild(titulo)
 

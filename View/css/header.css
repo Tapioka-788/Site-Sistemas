@@ -43,12 +43,12 @@ header {
         text-align: center;
         line-height: 3vw; 
     }
-    #menuHead {
+    /* #menuHead {
         width: 3vw;
 
         background-color: rgb(230, 220, 220);
         border-radius: 50%;
-    }
+    } */
     #logo {
         width: 3vw;
 

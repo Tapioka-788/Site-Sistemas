@@ -1,4 +1,4 @@
-footer{
+footer {
     width: 100vw;
     height: 7vh;
 
@@ -8,4 +8,45 @@ footer{
 
     position: fixed;
     bottom: 0vh;
+
+    justify-content: center;
 }
+
+footer, #divFooter{
+    display: flex;
+    align-items: center;
+}
+
+#divFooter{
+    width: 40vw;
+
+    justify-content: space-evenly;
+
+    .btnsFooter {
+        width: 2vw;
+        height: 2vw;
+
+        border-radius: 50%;
+        border: none;
+
+        background-color: blue;
+
+        .icone{
+            width: 2vw;
+            height: 2vw; 
+        }
+    }
+    #dinoSis{
+        width: 3vw;
+        height: 3vw;
+
+        background-color: blue;
+    }
+}
+
+
+/*
+nomedes.id = 'nomedes'
+
+dinoSis.id = 'dinoSis'
+ */
