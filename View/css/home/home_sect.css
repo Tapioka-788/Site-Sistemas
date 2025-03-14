@@ -5,4 +5,8 @@ section{
     margin-top: 10vh;
 
     overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

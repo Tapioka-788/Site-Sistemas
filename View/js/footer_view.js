@@ -1,4 +1,5 @@
 import { btnsFooter } from "./../../Model/footerModel.js";
+import { mostrarTelaInfos } from"./../../Controller/informacoes/trocarTelaIf.js"
 
 export function criarFooter() {
     let SepFooter = document.getElementById('footer');
@@ -9,6 +10,8 @@ export function criarFooter() {
     let botaoIf = document.createElement('button');
     botaoIf.id = "botaoIf";
     botaoIf.className = "btnsFooter"
+    botaoIf.textContent = "Infos"
+    botaoIf.onclick = mostrarTelaInfos;
 
     let iconeI = document.createElement('i');
     // iconeI.classList = btnsFooter[i].iconeIf;

@@ -1,6 +1,7 @@
 @import url(./../header.css);
 @import url(./turmas_sect.css);
 @import url(./../footer.css);
+@import url(./../iformacoes.css);
 
 body{
     width: 100vw;
@@ -9,4 +10,6 @@ body{
     margin: 0;
 
     overflow: hidden;
+
+    display: flex;
 }
