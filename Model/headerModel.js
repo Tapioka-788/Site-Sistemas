@@ -1,12 +1,12 @@
 export const btnsHeader = [
     {
-        nome: "Index",
-        destino: "./index.html",
+        nome: "Home",
+        destino: "./home.html",
         icone: "",
     },
     {
-        nome: "Home",
-        destino: "./home.html",
+        nome: "Index",
+        destino: "./index.html",
         icone: "",
     },
     {

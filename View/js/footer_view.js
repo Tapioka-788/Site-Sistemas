@@ -1,59 +1,62 @@
-import { btnsFooter } from "./../../Model/footerModel.js";
-import { mostrarTelaInfos } from"./../../Controller/informacoes/trocarTelaIf.js"
-
 export function criarFooter() {
-    let SepFooter = document.getElementById('footer');
+    let footer = document.getElementById('footer');
 
-    let divFooter = document.createElement('div')
-    divFooter.id = 'divFooter'
+    let divFooter = document.createElement('div');
+    divFooter.id = 'divFooter';
 
-    let botaoIf = document.createElement('button');
-    botaoIf.id = "botaoIf";
-    botaoIf.className = "btnsFooter"
-    botaoIf.textContent = "Infos"
-    botaoIf.onclick = mostrarTelaInfos;
+    // Lado direito do footer
+    let divDir = document.createElement('div');
+    divDir.id = 'divDir';
+    divDir.className = "divLados";
 
-    let iconeI = document.createElement('i');
-    // iconeI.classList = btnsFooter[i].iconeIf;
-    iconeI.id = 'iconeI'
+    let divDirBtn = document.createElement('div');
+    divDirBtn.id = 'divDirBtn';
 
-    let nomedes = document.createElement('h1');
-    nomedes.textContent = 'Cema';
-    nomedes.id = 'nomedes'
+    let botao1 = document.createElement('button');
+    botao1.id = "botao1";
+    botao1.className = "botoes";
 
-    let dinoSis = document.createElement('img')
-    dinoSis.id = 'dinoSis'
+    let botao2 = document.createElement('button');
+    botao2.id = "botao2";
+    botao2.className = "botoes";
 
-    let botaoIc = document.createElement('button');
-    botaoIc.id = "botaoIc";
-    botaoIc.className = "btnsFooter"
+    divDirBtn.appendChild(botao1);
+    divDirBtn.appendChild(botao2);
 
-    let iconeC = document.createElement('i');
-    // iconeC.classList = btnsFooter[i].iconeIc;
-    iconeC.id = 'iconeC'
+    let email = document.createElement('h1');
+    email.id = 'email';
+    email.textContent = "Contact us: example@gmail.com";
 
-    botaoIf.appendChild(iconeI);
-    botaoIc.appendChild(iconeC);
+    divDir.appendChild(email);
+    divDir.appendChild(divDirBtn);
 
-    divFooter.appendChild(botaoIf);
-    divFooter.appendChild(nomedes)
-    divFooter.appendChild(dinoSis)
-    divFooter.appendChild(botaoIc);
+    // Lado esquerdo do footer
+    let divEsq = document.createElement('div');
+    divEsq.id = 'divEsq';
+    divEsq.className = "divLados";
 
-    SepFooter.appendChild(divFooter)
+    let botaoAdm = document.createElement('button');
+    botaoAdm.id = "botaoAdm";
 
-    console.log('Ta criando?')
+    let iconeBotaoAdm = document.createElement('i');
+    iconeBotaoAdm.id = "iconeBotaoAdm";
+
+    botaoAdm.appendChild(iconeBotaoAdm);
+    divEsq.appendChild(botaoAdm);
+
+    divFooter.appendChild(divEsq);
+    divFooter.appendChild(divDir);
+
+    footer.appendChild(divFooter);
+
+    console.log('Footer criado com sucesso!');
 }
 
 
-// botaoIf = botao informacao;
-// iconeI = icone informacao;
-//
-// nomedes = nome/descricao;
-//
-// dinoSis = dinossauro sistemas;
-//
-// botaoIc = botao configuracao;
-// iconeC = icone configuracao;
-//
-// Sepfooter = Separacao Footer;
+// divDir representa a div do lado direito
+// divEsq representa a div do lado esquerdo
+
+// divLados a classe que contem os mesmos caracteres em ambos os lados
+
+// botaoAdm botao para acessar a area de moderador
+// iBotaoAdm icone do botaoAdm
