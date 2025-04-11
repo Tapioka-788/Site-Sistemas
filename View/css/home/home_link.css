@@ -1,14 +1,9 @@
 @import url(./../header.css);
 @import url(./home_sect.css);
-@import url(./../footer.css);
 
 body{
     width: 100vw;
     height: 100vh;
 
     margin: 0;
-
-    overflow: hidden;
-
-    display: flex;
 }
