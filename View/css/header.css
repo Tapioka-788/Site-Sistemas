@@ -1,98 +1,112 @@
 body {
-    width: 100vw;
-    height: 100vh;
-  
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  width: 100vw;
+}
+
+header,
+#esquerda,
+#direita {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+#esquerda {
+  width: 60vw;
+  padding-left: 1vw;
+}
+
+#esquerda #dino {
+  width: 8vh;
+  height: 8vh;
+  margin: 1vh;
+}
+
+#direita {
+  width: 40vw;
+  justify-content: end;
+}
+
+#direita .botoes {
+  width: 11vw;
+  height: 5vh;
+  margin: 0vh 1vw;
+  padding-left: 1vw;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-radius: 10vw;
+  border: none;
+  background-color: #2963B9;
+  color: white;
+}
+
+#direita .botoes .iconBTN {
+  width: 3vh;
+  height: 3vh;
+  margin: 0vh 1vh;
+  color: white;
+}
+
+#direita .botoes .textBTN {
+  font-size: 2.25vh;
+}
+
+#direita .botoes:hover {
+  background-color: #942E2E;
+  cursor: pointer;
+}
+
+@keyframes moveDino {
+  0% {
+    transform: translateX(0);
   }
-  
-  header {
-    width: 100vw;
-  
+
+  50% {
+    transform: translateX(50vw);
   }
-  
-  header,
-  #esquerda,
-  #direita {
-    height: 10vh;
-    display: flex;
-    align-items: center;
+
+  100% {
+    transform: translateX(0);
   }
-  
-  #esquerda {
-    width: 60vw;
-  
-    #dino {
-      width: 8vh;
-      height: 8vh;
-      background-color: black;
-      margin: 1vh;
-    }
+}
+
+@keyframes white {
+  from {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  #direita {
-    width: 40vw;
-  
-    justify-content: end;
-  
-    .botoes {
-      width: 11vw;
-      height: 5vh;
-  
-      margin: 0vh 1vw;
-      padding-left: 1vw;
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-  
-      border-radius: 10vw;
-      border: none;
-  
-      background-color: #2963B9;
-      color: white;
-  
-      .iconBTN {
-        width: 3vh;
-        height: 3vh;
-        margin: 0vh 1vh;
-        color: white;
-      }
-  
-      .textBTN {
-        font-size: 2.25vh
-      }
-  
-    }
-  
-    .botoes:hover {
-      background-color: #942E2E;
-      cursor: pointer;
-    }
+
+  to {
+    opacity: 0;
+    transform: translateX(60px);
   }
-  
-  @keyframes moveDino {
-    0% {
-      transform: translateX(0);
-    }
-  
-    50% {
-      transform: translateX(50vw);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
+}
+
+@keyframes black {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
   }
-  
-  @keyframes mudarCor {
-    0% {
-      color: white;
-    }
-  
-    50% {
-      color: white;
-    }
-  
-    100% {
-      color: black;
-    }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+#texto {
+  display: inline-block;
+  font-size: 2.5vh;
+  color: black;
+  opacity: 1;
+  transform: translateX(0);
+  animation: none;
+  transition: none;
+  position: relative;
+}
