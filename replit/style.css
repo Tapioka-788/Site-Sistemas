@@ -1,0 +1,103 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #calendario {
+    width: 45vw;
+    height: 82.5vh;
+  
+    border-radius: 2vw;
+    border: solid 0.5vh rgb(4, 4, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #headerCalendario {
+    width: 45vw;
+    height: 11.5vh;
+  
+    border-bottom: solid 0.5vh rgb(4, 4, 4);
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .meses {
+      width: 4.5vw;
+      height: 7vh;
+  
+      margin: 0vh 1vw;
+      font-size: 1.25vw;
+  
+      background-color: transparent;
+  
+      border: none;
+    }
+  }
+  
+  #categoria {
+    width: 42vw;
+    margin: 0vh 1.5vw;
+    height: 6.25vh;
+    display: grid;
+  
+    grid-gap: 2.92vh;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-items: end;
+  
+    .feiras {
+        width: 4.5vw;
+        height: 5vh;
+  
+        font-size: 1.5vw;
+        font-weight: bold; /* Adiciona o negrito */
+  
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+  }
+  
+  #dias {
+    width: 42vw;
+    margin: 1vh 1.5vw;
+    height: 58.93vh;
+    display: grid;
+  
+    /* A quantidade de linhas nunca vai passar de 6, então vamos preparar o espaço */
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+  
+    gap: 1vh; /* Reduzido para caber tudo */
+    justify-content: center;
+  }
+  
+  .day {
+    width: 4.5vw;
+    height: 9.42vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 1.5vw;
+    font-weight: bold;
+  
+    background-color: #D9D9D9;
+    border: solid 0.1vw black;
+  }
+  
+  .vazio {
+    visibility: hidden;
+  }
+  
+  .foraDoMes {
+    opacity: 0.4;
+    background-color: #dcdcdc; /* ou o mesmo do .day, se quiser igual */
+  }
