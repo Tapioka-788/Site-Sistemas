@@ -2,7 +2,7 @@ export const headerBtns = [
     {
         icon: "",
         texto: "Agendas",
-        caminho: "",
+        caminho: "./agenda.html",
     },
     {
         icon: "",
